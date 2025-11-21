@@ -14,7 +14,7 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
     const navigate = useNavigate();
     const [user, setUser] = useState<any>(null);
     const [loading, setLoading] = useState(true);
-
+    const { setUser } = useAuth();
     useEffect(() => {
         const fetchUser = async () => {
             try {
